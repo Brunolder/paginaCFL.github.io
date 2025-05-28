@@ -19,23 +19,16 @@ function enviar(){
     }
 }
 
-const btn = document.getElementById('button');
 
-document.getElementById('form')
- .addEventListener('submit', function(event) {
+const formulario = document.getElementById('formulario');
+ formulario.addEventListener('submit', function(event) {
    event.preventDefault();
-
-   btn.value = 'Sending...';
-
-   const serviceID = 'default_service';
+   const serviceID = 'service_ftgx8oh';
    const templateID = 'template_b5w6i1d';
-
    emailjs.sendForm(serviceID, templateID, this)
     .then(() => {
-      btn.value = 'Send Email';
       alert('Sent!');
     }, (err) => {
-      btn.value = 'Send Email';
       alert(JSON.stringify(err));
     });
 });
