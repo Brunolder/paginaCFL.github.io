@@ -14,33 +14,35 @@
 </head>
 <body>
     <form id="formulario">
-        <div>
+        <div class="field">
             <label>Nombre</label>
-            <input type="text" id="nombre" placeholder="Ingrese su nombre">
+            <input type="text" id="nombre">
         </div>
-        <div>
+        <div class="field">
             <label>E-mail</label>
-            <input type="text" id="email" placeholder="ejemploemail@hotmail.com">
-        </div>
-        <div>
-            <label>Asunto</label>
-            <input type="text" id="asunto" placeholder="Asunto por el cual se comunica. . .">
+            <input type="email" id="email">
         </div>
 
-        <div>
-            <label>Mensaje</label>
-            <textarea id="mensaje" placeholder="Ingrese su mensaje. . ."></textarea>
+        <div class="field">
+          <label for="affair">Asunto</label>
+          <input type="text" id="asunto">
         </div>
+        
+        <div class="field">
+          <label for="message">Mensaje</label>
+          <textarea id="mensaje">
+        </div>
+        
+        
+      
     <!--  
       <div class="g-recaptcha" data-sitekey="6LdkwU0rAAAAAL2lX0jxzEs2er8d-1wRxrr9MU0f"></div>
       <br/>
       <input type="submit" value="Submit">
     -->
 
-
-        <form> <button onclick="enviar()">Enviar</button></form>
-    </form>
-    
+    <input onclick="enviar()" type="submit" id="button" value="Send Email" >
+      </form>
     
 </body>
 </html>
